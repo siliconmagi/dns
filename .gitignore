@@ -5,6 +5,8 @@
 !*.py
 !*.md
 !.gitignore
+!Pipfile
+!*.txt
 
 # ...even if they are in subdirectories
 !*/

@@ -1,0 +1,57 @@
+# powershell list path variable multiple lines
+$env:path.split(";")
+
+# permanent path
+[environment]::GetEnvironmentVariable("path", "User").split(";")
+
+# quick setup path: python, pip, apm
+$env:path="$env:Path;C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32"
+$env:path="$env:Path;C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts"
+$env:path="$env:Path;C:\Users\Administrator\AppData\Local\atom\bin"
+
+# install python via latest exe
+# setup python interpreter to PATH
+$env:path="$env:Path;C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32"
+$env:path="$env:Path;C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts"
+
+# add user base binaries to PATH
+# print location binaries install via pip
+py -m site --user-site
+C:\Users\Administrator\AppData\Roaming\Python\Python36\Scripts
+$env:path="$env:Path;C:\Users\Administrator\AppData\Roaming\Python\Python36\Scripts"
+
+# remove path: removes c:\windows... from path
+set path=%path:c:\windows\system32;=%
+C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts
+set path=%path:C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts;=%
+$env:path="$env:Path;C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts"
+
+# using pipenv to install deps in project folder
+cd myproject
+pipenv install requests
+
+[Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32;C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32", "User")
+
+# atom
+apm install linter-flake8 linter-pep8 autocomplete-python linter
+pip install pep8 flake 8 jedi
+
+# install chocolatey
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+# install poshgit with choco
+choco install git 
+choco install poshgit
+
+# install powershell
+choco install powershell
+
+# install curl
+choco install curl
+
+# wget
+choco install wget
+
+# nodejs
+choco install nodejs
+choco install nodejs.install

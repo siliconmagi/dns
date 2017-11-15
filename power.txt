@@ -1,0 +1,10 @@
+# powershell commands
+# rename
+Rename-Item -Path ".\install" -NewName "install.txt"
+
+# copy
+1) copy:  highlight > enter
+2) paste: right-click
+
+# dig DNS records
+dig koelelanai.com NS
