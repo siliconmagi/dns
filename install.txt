@@ -40,7 +40,7 @@ pip install pep8 flake 8 jedi
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # install poshgit with choco
-choco install git 
+choco install git
 choco install poshgit
 
 # install powershell
@@ -55,3 +55,9 @@ choco install wget
 # nodejs
 choco install nodejs
 choco install nodejs.install
+
+# django
+pipenv install django
+
+# install yarn
+choco install yarn

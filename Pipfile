@@ -9,6 +9,7 @@ name = "pypi"
 
 ipython = "*"
 dnsyo = "*"
+django = "*"
 
 
 [dev-packages]

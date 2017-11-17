@@ -8,3 +8,15 @@ Rename-Item -Path ".\install" -NewName "install.txt"
 
 # dig DNS records
 dig koelelanai.com NS
+
+# curl download from FTP
+curl -u ftpuser:ftppass -O ftp://ftp_server/public_html/xss.php
+
+# upload to FTP
+curl -u ftpuser:ftppass -T myfile.txt ftp://ftp.testserver.com
+
+# send email via smtp
+curl --mail-from c_matthew.sitthideth@pspinc.com --mail-rcpt c_matthew.sitthideth@pspinc.com smtp://smtp.dreamersi.net
+
+# send mail
+curl --url 'smtps://smtp.dreamersi.net:465' --ssl-reqd --mail-from 'c_matthew.sitthideth@pspinc.com' --mail-rcpt 'c_matthew.sitthideth@pspinc.com' \ --upload-file mail.txt --user 'c_matthew.sitthideth@pspinc.com:0Ygnu*1Ecto*' --insecure
